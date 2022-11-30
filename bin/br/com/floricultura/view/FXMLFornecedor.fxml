@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.FornecedorController">
+   <children>
+      <AnchorPane fx:id="funcionarioView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-opacity: 100;">
+         <children>
+            <TableView fx:id="fornecedorTableView" layoutX="15.0" layoutY="193.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="966.0">
+              <columns>
+                  <TableColumn fx:id="columnOperacao" maxWidth="100.0" prefWidth="100.0" text="OPERACAO" />
+                  <TableColumn fx:id="columnCodigo" maxWidth="100.0" prefWidth="100.0" text="CÓDIGO" />
+                <TableColumn fx:id="columnCpfCnpj" maxWidth="100.0" prefWidth="100.0" text="CPF / CNPJ" />
+                <TableColumn fx:id="columnRazaoSocial" maxWidth="250.0" prefWidth="250.0" text="RAZÃO SOCIAL" />
+                  <TableColumn fx:id="columnNomeFantasia" maxWidth="250.0" prefWidth="250.0" text="NOME FANTASIA" />
+                  <TableColumn fx:id="columnEndereco" maxWidth="100.0" prefWidth="100.0" text="ENDEREÇO" />
+                  <TableColumn fx:id="columnNumero" maxWidth="100.0" prefWidth="100.0" text="N°" />
+                  <TableColumn fx:id="columnCidade" maxWidth="100.0" prefWidth="100.0" text="CIDADE" />
+                  <TableColumn fx:id="columnBairro" maxWidth="100.0" prefWidth="100.0" text="BAIRRO" />
+                  <TableColumn fx:id="columnEmail" maxWidth="100.0" prefWidth="100.0" text="EMAIL" />
+                  <TableColumn fx:id="columnCelular" maxWidth="100.0" prefWidth="100.0" text="CELULAR" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtFilter" layoutX="396.0" layoutY="143.0" prefHeight="25.0" prefWidth="243.0" />
+            <Button fx:id="btnAddFornecedor" layoutX="693.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleBntAddFornecedorAction" prefHeight="24.0" prefWidth="35.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_PLUS" />
+               </graphic></Button>
+            <Label layoutX="396.0" layoutY="113.0" text="Buscar" />
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</StackPane>

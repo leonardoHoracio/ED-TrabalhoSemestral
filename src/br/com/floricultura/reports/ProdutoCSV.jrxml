@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProdutoCSV" pageWidth="1000" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e654836b-f81f-4a33-a8c0-b0f317ac2f85">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="CODPRODUTO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="CODPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="CODPRODUTO"/>
+	</field>
+	<field name="NOMEPRODUTO" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="NOMEPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="NOMEPRODUTO"/>
+	</field>
+	<field name="QUANTIDADEPRODUTO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="QUANTIDADEPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="QUANTIDADEPRODUTO"/>
+	</field>
+	<field name="DATAVALIDADE" class="java.util.Date">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="DATAVALIDADE"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="DATAVALIDADE"/>
+	</field>
+	<field name="DATACADASTRADA" class="java.util.Date">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="DATACADASTRADA"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="DATACADASTRADA"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="38">
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="30" uuid="5f8f10e8-cc57-4fcf-b3ab-790c339f52bf"/>
+				<text><![CDATA[Código do Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="30" uuid="c6dfcd30-a131-46ce-93d6-8b7b6acccb61"/>
+				<text><![CDATA[Nome do Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="a1bfd943-b44b-4fa2-b835-2997e826ca52"/>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="30" uuid="ea811f27-4d56-40e1-990f-5f9b0c25715b"/>
+				<text><![CDATA[Data Cadastro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="30" uuid="3d510634-9cad-46a0-9283-cc3c31bd3a90"/>
+				<text><![CDATA[Data de Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="30" uuid="b9885efb-42f4-40ad-9fc8-a3d17167fbe3"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="a4f3d88b-d793-4046-9bfa-1517fe97c5d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CODPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="e4f3ac0d-bd6f-4ba6-84df-a08de3091932">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{QUANTIDADEPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="69782c98-5013-4886-b765-b23fd3aadbeb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CODPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="97318050-a7ea-4f1d-94c2-ee5e72b2f8ce">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{DATAVALIDADE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="b432eb97-a0b4-41be-b402-fefd30a3270f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{DATACADASTRADA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="57a54a9d-2c5a-49a3-ae89-2b21d02850aa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NOMEPRODUTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

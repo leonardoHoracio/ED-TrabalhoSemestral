@@ -1,0 +1,112 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* .root {
+	-fx-backgound-color: #F4F4F4;
+	-fx-font-size: 14px;
+}*/
+
+.card{
+	-fx-background-color: #FFF;
+	-fx-border-radius: 4px;
+	-fx-background-radius: 4px;
+	-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0, 1.5);
+}
+
+
+.linear_gradient_red{
+	-fx-background-color: linear-gradient(to top right, #FFD56E, #FC6462);
+}
+
+.btn-logar{
+	-fx-background-color: red;
+	-fx-background-radius: 35px;
+	-fx-border-radius: 35px;
+	-fx-font-wegth:bold;
+	-fx-font-size: 15px;
+	-fx-text-fill: #FFF;
+	-fx-button-type: FLAT;
+	-fx-pref-width: 100px;
+	-fx-pref-height: 35px;
+	
+}
+
+.toolbar {
+	-fx-background-color: #610B0B;
+}
+
+.hamburguer-icon{
+	-fx-spacing: 4px;
+}
+
+.hamburguer-icon StackPane{
+	-fx-background-color: #FFF;
+}
+
+.sider-menu{
+	-fx-background-color:  #610B0B;
+}
+
+.sider-menu-button{
+	-fx-background-color: #610B0B;
+	-fx-background-radius:0px;
+	-fx-border-width:0px;
+	-fx-background-style:none;
+	-fx-text-fill: white;
+	-fx-pref-width: 150px;
+	-fx-pref-height: 50px;
+	-fx-cursor:hand;
+	-fx-alignment: CENTER_LEFT;
+}
+
+.sider-menu-button:hover{
+	-fx-background-color: #730404;
+
+}
+
+.sider-menu-button:default{
+	-fx-background-color: #610B0B;
+}
+
+.card-vendas{
+	-fx-background-radius: 10px;
+	-fx-border-radius: 10px;
+	-fx-border-color: #610B0B;
+}
+.card-vendas-label{
+	-fx-text-fill: black;
+}
+
+.dropButton{
+	-fx-background-color: #610B0B;
+	-fx-text-fill: white;
+}
+.dropButton:hover{
+	-fx-background-color: #610B0B;
+	-fx-text-fill: white;
+}
+.itemMenuButton{
+	-fx-text-fill: red;
+}
+.sider-menu-button2, itemMenuButton{
+	-fx-background-color: #610B0B;
+	-fx-background-radius:0px;
+	-fx-border-width:0px;
+	-fx-background-style:none;
+	-fx-text-fill: white;
+	-fx-pref-width: 150px;
+	-fx-pref-height: 50px;
+	-fx-cursor:hand;
+	-fx-alignment: CENTER_LEFT;
+	-fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+ -fx-margin: 25;
+ -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+}
+.sider-menu-button2:hover, itemMenuButton{
+	-fx-background-color: #730404;
+
+}
+.itemMenu:hover{
+	-fx-background-color: #01DF74;
+}
+
+

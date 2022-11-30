@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.FornecedorFormController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="897.0">
+         <children>
+            <Pane layoutX="81.0" layoutY="23.0" prefHeight="576.0" prefWidth="822.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="20.0" text="Código Fornecedor" />
+                  <Label layoutX="20.0" layoutY="90.0" text="Razão Social" />
+                  <Label layoutX="180.0" layoutY="20.0" text="CPF/CNPJ" />
+                  <Label layoutX="400.0" layoutY="20.0" text="Status" />
+                  <Label layoutX="20.0" layoutY="230.0" text="Complemento" />
+                  <Label layoutX="20.0" layoutY="160.0" text="CEP" />
+                  <Label layoutX="205.0" layoutY="160.0" text="Lougradouro" />
+                  <Label layoutX="20.0" layoutY="300.0" text="Insc. Estadual" />
+                  <Label layoutX="400.0" layoutY="90.0" text="Nome Fantasia" />
+                  <Label layoutX="205.0" layoutY="300.0" text="Insc. Munincipal" />
+                  <Label layoutX="410.0" layoutY="300.0" text="Data Inclusão Sistema" />
+                  <Label layoutX="592.0" layoutY="160.0" text="N°" />
+                  <Label layoutX="340.0" layoutY="230.0" text="Bairro" />
+                  <Label layoutX="540.0" layoutY="230.0" text="Cidade" />
+                  <Label layoutX="710.0" layoutY="230.0" text="UF" />
+                  <Label layoutX="20.0" layoutY="370.0" text="E-mail" />
+                  <Label layoutX="410.0" layoutY="370.0" text="Celular" />
+                  <Label layoutX="610.0" layoutY="370.0" text="Telefone" />
+                  <Label layoutX="410.0" layoutY="440.0" text="Celular" />
+                  <Label layoutX="610.0" layoutY="440.0" text="Telefone" />
+                  
+                  <TextField fx:id="txtCodigoFornecedor" disable="true" editable="false" layoutX="20.0" layoutY="50.0" prefHeight="25.0" prefWidth="112.0" />
+                  <TextField fx:id="txtCpfCnpj" layoutX="180.0" layoutY="50.0" onKeyReleased="#onKeyReleasedCpfCnpj" onKeyTyped="#onKeyTypedCpfCnpj" prefHeight="25.0" prefWidth="181.0" />
+                  <ComboBox fx:id="cmbStatus" layoutX="400.0" layoutY="50.0" prefHeight="25.0" prefWidth="133.0" />
+                  <TextField fx:id="txtRazaoSocial" layoutX="20.0" layoutY="120.0" prefHeight="25.0" prefWidth="340.0" />
+                  <TextField fx:id="txtNomeFantasia" layoutX="400.0" layoutY="120.0" prefHeight="25.0" prefWidth="371.0" />
+                  <TextField fx:id="txtCEP" layoutX="20.0" layoutY="190.0" prefHeight="25.0" prefWidth="137.0" />
+                  <TextField fx:id="txtLogradouro" layoutX="205.0" layoutY="190.0" prefHeight="25.0" prefWidth="341.0" />
+                  <TextField fx:id="txtNumero" layoutX="592.0" layoutY="190.0" prefHeight="25.0" prefWidth="44.0" />
+                  <TextField fx:id="txtComplemento" layoutX="20.0" layoutY="260.0" prefHeight="25.0" prefWidth="275.0" />
+                  <TextField fx:id="txtBairro" layoutX="340.0" layoutY="260.0" prefHeight="25.0" prefWidth="159.0" />
+                  <TextField fx:id="txtCidade" layoutX="540.0" layoutY="260.0" prefHeight="25.0" prefWidth="145.0" />
+                  <ComboBox fx:id="cmbUF" layoutX="710.0" layoutY="260.0" prefHeight="25.0" prefWidth="66.0" />
+                  <TextField fx:id="txtInscEstadual" layoutX="20.0" layoutY="330.0" onKeyReleased="#onKeyReleasedInscEstadual" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="txtInscMunincipal" layoutX="210.0" layoutY="330.0" onKeyReleased="#onKeyReleasedIscMunicipal" prefHeight="25.0" prefWidth="150.0" />
+                  <DatePicker fx:id="txtDataInclusao" layoutX="410.0" layoutY="330.0" prefHeight="25.0" prefWidth="133.0" />
+                  <TextField fx:id="txtEmail" layoutX="20.0" layoutY="400.0" onKeyReleased="#onKeyReleasedEmail1" prefHeight="25.0" prefWidth="341.0" />
+                  <TextField fx:id="txtCelular" layoutX="410.0" layoutY="400.0" onKeyReleased="#onKeyReleasedCelular1" prefHeight="25.0" prefWidth="159.0" />
+                  <TextField fx:id="txtTelefone" layoutX="610.0" layoutY="400.0" onKeyReleased="#onKeyReleasedTelefone1" prefHeight="25.0" prefWidth="159.0" />
+                  <TextField fx:id="txtCelular1" layoutX="410.0" layoutY="470.0" onKeyReleased="#onKeyReleasedCelular1" prefHeight="25.0" prefWidth="159.0" />
+                  <TextField fx:id="txtTelefone1" layoutX="610.0" layoutY="470.0" onKeyReleased="#onKeyReleasedTelefone1" prefHeight="25.0" prefWidth="159.0" />
+                  <JFXButton fx:id="btnSalvar" layoutX="72.0" layoutY="520.0" onMouseClicked="#onMouseClickedSalvar" prefHeight="30.0" prefWidth="100.0" text="Salvar" />
+                  <JFXButton fx:id="btnAlterar" layoutX="224.0" layoutY="520.0" onMouseClicked="#onMouseClickedAlterar" prefHeight="30.0" prefWidth="100.0" text="Alterar" />
+                  <JFXButton fx:id="btnExcluir" layoutX="370.0" layoutY="520.0" onMouseClicked="#onMouseClickedExcluir" prefHeight="30.0" prefWidth="100.0" text="Excluir" />
+                  <JFXButton fx:id="btnLimpar" layoutX="490.0" layoutY="520.0" onMouseClicked="#onMouseClickedLimpar" prefHeight="30.0" prefWidth="100.0" text="Limpar" />
+                  <JFXButton fx:id="btnVoltar" layoutX="635.0" layoutY="520.0" onMouseClicked="#onMouseClickedVoltar" prefHeight="30.0" prefWidth="100.0" text="Voltar" />
+                  <ComboBox fx:id="cmbTipoEmpresa" layoutX="570.0" layoutY="50.0" prefHeight="25.0" prefWidth="133.0" />
+                  <Label layoutX="570.0" layoutY="20.0" text="Tipo Empresa" />
+
+               </children>
+            </Pane>
+            <Label fx:id="lblError" layoutX="32.0" layoutY="15.0" />
+         </children></AnchorPane>
+      
+   </children>
+</StackPane>

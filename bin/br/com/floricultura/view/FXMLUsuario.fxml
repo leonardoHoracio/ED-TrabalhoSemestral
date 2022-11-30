@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.UsuarioController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnUsuario" layoutX="618.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedAddUsuario" prefHeight="24.0" prefWidth="38.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" />
+               </graphic></Button>
+            <TextField fx:id="txtFilter" layoutX="335.0" layoutY="136.0" prefHeight="25.0" prefWidth="220.0" />
+            <Label layoutX="335.0" layoutY="99.0" text="Filtro" />
+            <ScrollPane layoutX="70.0" layoutY="200.0" prefHeight="380.0" prefWidth="860.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TableView fx:id="usuarioTableView">
+                          <columns>
+                              <TableColumn fx:id="columnCodigo" maxWidth="100.0" prefWidth="100.0" text="CÓDIGO" />
+                            <TableColumn fx:id="columnLogin" maxWidth="200.0" prefWidth="200.0" text="LOGIN" />
+                            <TableColumn fx:id="columnNomeCompleto" maxWidth="300.0" prefWidth="300.0" text="NOME COMPLETO" />
+                              <TableColumn fx:id="columnEmail" maxWidth="300.0" prefWidth="300.0" text="E-MAIL" />
+                              <TableColumn fx:id="columnDataCadastro" maxWidth="150.0" prefWidth="150.0" text="DATA DE CADASTRO" />
+                              <TableColumn fx:id="columnNivelAcesso" maxWidth="150.0" prefWidth="150.0" text="NIVEL DE ACESSO" />
+                              <TableColumn fx:id="columnStatus" maxWidth="150.0" prefWidth="150.0" text="STATUS" />
+                              <TableColumn fx:id="columnOperacao" maxWidth="100.0" prefWidth="100.0" text="OPERAÇÃO" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></AnchorPane>
+   </children>
+</StackPane>

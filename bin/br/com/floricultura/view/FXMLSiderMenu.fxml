@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="150.0" styleClass="sider-menu" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.SiderMenuController">
+   <children>
+      <Pane layoutX="25.0" layoutY="17.0" prefHeight="136.0" prefWidth="150.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="25.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Separator prefWidth="200.0" />
+      <JFXButton fx:id="btnDashboard" onAction="#onActionDashboard" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Home">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnVendas" layoutX="10.0" layoutY="149.0" onAction="#onActionVendas" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Vendas">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnEstoque" layoutX="10.0" layoutY="199.0" onAction="#onActionEstoque" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Estoque">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="DROPBOX" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnProduto" layoutX="10.0" layoutY="249.0" onAction="#onActionProduto" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Produto">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PRODUCT_HUNT" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnCliente" layoutX="10.0" layoutY="299.0" onAction="#onActionCliente" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Cliente">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnFornecedor" layoutX="10.0" layoutY="349.0" onAction="#onActionFornecedor" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Fornecedor">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnCategoria" layoutX="10.0" layoutY="399.0" onAction="#onActionCategoria" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Categoria">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnUsuario" layoutX="10.0" layoutY="449.0" onAction="#onActionUsuario" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Usuário">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnRelatorios" layoutX="10.0" layoutY="499.0" onAction="#onActionRelatorios" prefHeight="45.0" prefWidth="150.0" styleClass="sider-menu-button" stylesheets="@styles.css" text="Relatorios">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FILE" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

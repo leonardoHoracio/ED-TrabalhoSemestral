@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="470.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.PagamentoController">
+   <children>
+      <AnchorPane onKeyPressed="#onKeyPressedAnchor" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane layoutX="-2.0" prefHeight="47.0" prefWidth="476.0" style="-fx-background-color: #610B0B;">
+               <children>
+                  <Label layoutX="174.0" layoutY="12.0" text="PAGAMENTO" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="sairTelaPagamento" fill="WHITE" glyphName="CLOSE" layoutX="447.0" layoutY="29.0" onMouseClicked="#onClickedClose" size="18" />
+               </children>
+            </Pane>
+            <Pane layoutX="20.0" layoutY="60.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Total de Itens" />
+                  <TextField fx:id="txtTotalItens" disable="true" editable="false" layoutX="104.0" layoutY="30.0" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="250.0" layoutY="60.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Total da Compra" />
+                  <TextField fx:id="txtTotalCompra" disable="true" editable="false" layoutX="104.0" layoutY="30.0" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="20.0" layoutY="140.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Total a Pagar" />
+                  <TextField fx:id="txtTotalPagar" disable="true" editable="false" layoutX="104.0" layoutY="30.0" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="250.0" layoutY="220.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Troco" />
+                  <TextField fx:id="txtTroco" disable="true" editable="false" layoutX="104.0" layoutY="30.0" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+            <ComboBox fx:id="cmbFormaPagamento" layoutX="21.0" layoutY="303.0" prefHeight="25.0" prefWidth="185.0" promptText="Forma de Pagamento" />
+            <Pane layoutX="20.0" layoutY="220.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Valor a Pagar" />
+                  <TextField fx:id="txtValorPagar" layoutX="104.0" layoutY="30.0" onAction="#onActionValorPagar" onKeyTyped="#onKeyTypedValorPagar" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+            <Button fx:id="btnCancelar" layoutX="107.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionBtnCancelar" text="Cancelar - F10" />
+            <Button fx:id="btnEnviar" layoutX="277.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionBtnEnviar" text="Enviar - F11" />
+            <Pane layoutX="250.0" layoutY="140.0" prefHeight="65.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Valor Pago" />
+                  <TextField fx:id="txtValorPago" disable="true" editable="false" layoutX="104.0" layoutY="30.0" prefHeight="23.0" prefWidth="72.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

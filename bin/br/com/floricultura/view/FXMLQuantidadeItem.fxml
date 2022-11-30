@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.QuantidadeItemController">
+   <children>
+      <AnchorPane onKeyPressed="#onKeyPressedAnchor" prefHeight="400.0" prefWidth="450.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="450.0" styleClass="toolbar" stylesheets="@styles.css">
+               <children>
+                  <Label layoutX="167.0" layoutY="14.0" text="Quantidade" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSair" layoutX="417.0" layoutY="9.0" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#onMouseClickedSair">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="txtCodigoProduto" layoutX="20.0" layoutY="90.0" onAction="#onActionCodigoProduto" />
+            <TextField fx:id="txtCodigoBarras" disable="true" editable="false" layoutX="20.0" layoutY="160.0" prefHeight="25.0" prefWidth="406.0" />
+            <TextField fx:id="txtDescricaoProduto" disable="true" editable="false" layoutX="20.0" layoutY="230.0" prefHeight="25.0" prefWidth="406.0" />
+            <TextField fx:id="txtQuantidade" layoutX="55.0" layoutY="300.0" onAction="#onActionQuantidade" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="20.0" layoutY="60.0" text="Código Produto" />
+            <Label layoutX="20.0" layoutY="200.0" text="Descrição do Produto" />
+            <Label layoutX="22.0" layoutY="270.0" text="Quantidade" />
+            <Label layoutX="20.0" layoutY="130.0" prefHeight="17.0" prefWidth="92.0" text="Código de Barras" />
+            <Button layoutX="20.0" layoutY="300.0" mnemonicParsing="false" onAction="#onActionDecrescentar">
+               <graphic>
+                  <FontAwesomeIconView glyphName="MINUS" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnEnviar" layoutX="250.0" layoutY="360.0" mnemonicParsing="false" onAction="#onActionEnviar" text="Enviar - F11" />
+            <Button fx:id="btnCancelar" layoutX="80.0" layoutY="360.0" mnemonicParsing="false" onAction="#onActionCancelar" text="Cancelar - F10" />
+            <Button layoutX="114.0" layoutY="300.0" mnemonicParsing="false" onAction="#onActionAcrescentar">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

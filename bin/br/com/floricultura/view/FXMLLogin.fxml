@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="475.0" styleClass="card" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="80.0" prefHeight="488.0" prefWidth="482.0" styleClass="card">
+         <children>
+            <AnchorPane prefHeight="63.0" prefWidth="481.0" styleClass="linear_gradient_red">
+               <children>
+                  <Label layoutX="190.0" layoutY="14.0" text="Sistema ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <TextField fx:id="txtUsuario" layoutX="96.0" layoutY="217.0" prefHeight="25.0" prefWidth="296.0" promptText="Usuário" />
+            <PasswordField fx:id="txtSenha" layoutX="96.0" layoutY="274.0" prefHeight="25.0" prefWidth="296.0" promptText="Senha" />
+            <Button fx:id="btnLogar" layoutX="188.0" layoutY="347.0" mnemonicParsing="false" onAction="#onActionBtnLogar" prefHeight="25.0" prefWidth="207.0" styleClass="btn-logar" text="Logar" />
+            <ImageView fitHeight="114.0" fitWidth="151.0" layoutX="162.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

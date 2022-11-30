@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.ProdutoFormController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <JFXButton fx:id="btnDecrescente" alignment="CENTER" layoutX="210.0" layoutY="200.0" onMouseClicked="#onActionDecrescente" text="-" textAlignment="CENTER" textFill="TRANSPARENT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="MINUS" size="15" textAlignment="CENTER" />
+               </graphic></JFXButton>
+            <TextField fx:id="txtQuantidade" layoutX="250.0" layoutY="200.0" onKeyTyped="#onKeyTypedQuantidade" prefHeight="25.0" prefWidth="52.0" />
+            <TextField fx:id="txtNomeProduto" layoutX="210.0" layoutY="130.0" prefHeight="25.0" prefWidth="254.0" />
+            <TextField fx:id="txtPrecoVenda" layoutX="700.0" layoutY="130.0" prefHeight="25.0" prefWidth="103.0" />
+            <TextField fx:id="txtPrecoCompra" layoutX="530.0" layoutY="130.0" prefHeight="25.0" prefWidth="113.0" />
+            <TextField fx:id="txtcodigoBarras" layoutX="440.0" layoutY="60.0" prefHeight="25.0" prefWidth="418.0" />
+            <TextField fx:id="txtCodigoProduto" disable="true" editable="false" layoutX="210.0" layoutY="60.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label layoutX="210.0" layoutY="30.0" text="Código do Produto" />
+            <Label layoutX="440.0" layoutY="30.0" text="Código de Barras" />
+            <Label layoutX="210.0" layoutY="100.0" text="Nome" />
+            <JFXComboBox fx:id="cmbCategoria" layoutX="210.0" layoutY="270.0" prefHeight="25.0" prefWidth="254.0" />
+            <Label layoutX="530.0" layoutY="100.0" text="Preço de Compra" />
+            <Label layoutX="700.0" layoutY="100.0" text="Preço de Venda" />
+            <Label layoutX="210.0" layoutY="170.0" text="Quantidade" />
+            <Label layoutX="210.0" layoutY="240.0" text="Categoria" />
+            <JFXButton fx:id="btnSalvar" alignment="CENTER" layoutX="196.0" layoutY="527.0" onMouseClicked="#onActionSalvar" prefHeight="30.0" prefWidth="100.0" text="Salvar" textAlignment="CENTER" />
+            <JFXButton fx:id="btnCrescente" alignment="CENTER" layoutX="327.0" layoutY="201.0" onMouseClicked="#onActionCrescente" text="-" textAlignment="CENTER" textFill="TRANSPARENT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="15" textAlignment="CENTER" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAlterar" alignment="CENTER" layoutX="312.0" layoutY="528.0" onMouseClicked="#onActionAlterar" prefHeight="30.0" prefWidth="100.0" text="Alterar" textAlignment="CENTER" />
+            <JFXButton fx:id="btnExcluir" alignment="CENTER" layoutX="461.0" layoutY="527.0" onMouseClicked="#onActionExcluir" prefHeight="30.0" prefWidth="100.0" text="Excluir" textAlignment="CENTER" />
+            <JFXButton fx:id="btnLimpar" alignment="CENTER" layoutX="605.0" layoutY="527.0" onMouseClicked="#onActionLimpar" prefHeight="30.0" prefWidth="100.0" text="Limpar" textAlignment="CENTER" />
+            <JFXButton fx:id="btnVoltar" alignment="CENTER" layoutX="732.0" layoutY="528.0" onMouseClicked="#onActionVoltar" prefHeight="30.0" prefWidth="100.0" text="Voltar" textAlignment="CENTER" />
+            <JFXComboBox fx:id="cmbFornecedor" layoutX="440.0" layoutY="200.0" prefHeight="17.0" prefWidth="411.0" />
+            <Label layoutX="440.0" layoutY="170.0" text="Fornecedor" />
+            <JFXComboBox fx:id="cmbSubcategoria" layoutX="531.0" layoutY="270.0" prefHeight="25.0" prefWidth="254.0" />
+            <Label layoutX="530.0" layoutY="240.0" text="Subcategoria" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

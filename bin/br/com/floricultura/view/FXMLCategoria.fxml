@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="categoriaAnchorPane" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.CategoriaController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" >
+         <children>
+            <Label layoutX="250.0" layoutY="70.0" text="Código Categoria" />
+            <Label layoutX="250.0" layoutY="140.0" text="Descricao Categoria" />
+            <TextField fx:id="txtCodigoCategoria" disable="true" editable="false" layoutX="250.0" layoutY="100.0" />
+            <TextField fx:id="txtDescricaoCategoria" layoutX="250.0" layoutY="170.0" prefHeight="25.0" prefWidth="340.0" />
+            <TableView fx:id="tableViewCategoria" layoutX="252.0" layoutY="312.0" prefHeight="200.0" prefWidth="611.0">
+              <columns>
+                <TableColumn fx:id="columnCodigo" maxWidth="100.0" prefWidth="100.0" text="CÓDIGO" />
+                <TableColumn fx:id="columnDescricao" maxWidth="350.0" prefWidth="350.0" text="DESCRICAO" />
+                  <TableColumn fx:id="columnOperacao" maxWidth="160.0" prefWidth="160.0" text="OPERAÇÃO" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnSalvar" layoutX="215.0" layoutY="567.0" onMouseClicked="#onMouseClickedSalvar" prefHeight="30.0" prefWidth="100.0" text="Salvar" />
+            <JFXButton fx:id="btnAlterar" layoutX="362.0" layoutY="567.0" onMouseClicked="#onMouseClickedAlterar" prefHeight="30.0" prefWidth="100.0" text="Alterar" />
+            <JFXButton fx:id="btnExcluir" layoutX="521.0" layoutY="567.0" onMouseClicked="#onMouseClickedExcluir" prefHeight="30.0" prefWidth="100.0" text="Excluir" />
+            <JFXButton fx:id="btnLimpar" layoutX="657.0" layoutY="567.0" onMouseClicked="#onMouseClickedLimpar" prefHeight="30.0" prefWidth="100.0" text="Limpar" />
+            <TextField fx:id="txtFiltro" layoutX="250.0" layoutY="270.0" prefHeight="25.0" prefWidth="340.0" />
+            <Label layoutX="250.0" layoutY="240.0" text="Filtro" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Podutos" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b40888bc-15c2-4d9e-b4b9-a63b4fee163f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="CODPRODUTO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="CODPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="CODPRODUTO"/>
+	</field>
+	<field name="NOMEPRODUTO" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="NOMEPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="NOMEPRODUTO"/>
+	</field>
+	<field name="QUANTIDADEPRODUTO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="QUANTIDADEPRODUTO"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="QUANTIDADEPRODUTO"/>
+	</field>
+	<field name="DATACADASTRADA" class="java.sql.Date">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="DATACADASTRADA"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="DATACADASTRADA"/>
+	</field>
+	<field name="DATAVALIDADE" class="java.util.Date">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="DATAVALIDADE"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="DATAVALIDADE"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#610B0B" uuid="7ddbbcaa-b27d-4487-a625-9266c8981f12">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="7f446b0a-5f6f-4e48-952b-f54a16587af8"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRODUTOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="b101f5a1-7013-445b-966a-a5ca7f29956c"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Relatório de Produtos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="909c3042-443b-40c3-bea3-d687a348f124"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="90" height="20" uuid="9ba34817-9a21-417f-98e6-49db85957da9"/>
+				<text><![CDATA[Código do Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="81" height="21" uuid="715ee321-5c52-4fe8-a092-6e8560ac3a5d"/>
+				<text><![CDATA[Nome do Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="60" height="20" uuid="7a99d3a8-635e-4bd0-b5d1-0c24b0a477ac"/>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="80" height="19" uuid="1fd2bf36-d0de-4c7e-8b26-179f53510804"/>
+				<text><![CDATA[Data Cadastrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="85" height="19" uuid="d7d3980e-c178-49a0-abfe-54b7e5d994e2"/>
+				<text><![CDATA[Data de Validade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="0" width="42" height="18" uuid="637751ca-b673-4131-bacd-c6a6cc29508d"/>
+				<textFieldExpression><![CDATA[$F{CODPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="150" height="20" uuid="8570b6e8-dc49-47ec-9cf7-fdb1e7250841"/>
+				<textFieldExpression><![CDATA[$F{NOMEPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="27" height="20" uuid="caca4609-455c-41a9-8ec7-2a371a5f165c"/>
+				<textFieldExpression><![CDATA[$F{QUANTIDADEPRODUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="79" height="20" uuid="010297ca-1494-4672-b4b7-7943b1146033"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format($F{DATACADASTRADA})]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="420" y="0" width="100" height="21" uuid="02f46601-1f28-4562-a220-a371163f7a9e"/>
+				<textFieldExpression><![CDATA[$F{DATAVALIDADE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="868712a6-c06a-47b6-ad88-212cfec28dbe"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="92fc5603-1ef3-4d85-b2ce-e4b5dc976da7"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="c06649dd-577f-433a-a772-2c9b780f2c36"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-20" y="0" width="595" height="1" uuid="3b975334-756f-44fd-a695-75324960ceed"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

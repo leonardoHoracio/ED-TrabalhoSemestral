@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.ProdutoController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <JFXButton fx:id="btnAddProduto" layoutX="654.0" layoutY="98.0" onMouseClicked="#onMouseClickedAddProduto" text="Add Produto" />
+            <TextField fx:id="txtFilterProduto" layoutX="336.0" layoutY="94.0" prefHeight="33.0" prefWidth="226.0" />
+            <Label layoutX="340.0" layoutY="54.0" prefHeight="25.0" prefWidth="39.0" text="Busca" />
+            <ScrollPane layoutX="40.0" layoutY="205.0" prefHeight="400.0" prefWidth="941.0">
+               <content>
+                  <TableView fx:id="tableViewProduto">
+                    <columns>
+                      <TableColumn fx:id="colunmCodigoProduto" maxWidth="100.0" prefWidth="100.0" text="CÓDIGO" />
+                      <TableColumn fx:id="colunmNomeProduto" maxWidth="300.0" prefWidth="250.0" text="NOME PRODUTO" />
+                        <TableColumn fx:id="colunmCategoria" maxWidth="200.0" prefWidth="200.0" text="CATEGORIA" />
+                        <TableColumn fx:id="colunmSubCategoria" maxWidth="200.0" prefWidth="200.0" text="SUB-CATEGORIA" />
+                        <TableColumn fx:id="colunmFornecedor" maxWidth="300.0" minWidth="0.0" prefWidth="0.0" text="FORNECEDOR" />
+                        <TableColumn fx:id="colunmQuantidade" maxWidth="100.0" minWidth="0.0" prefWidth="100.0" text="QUANTIDADE" />
+                        <TableColumn fx:id="colunmValorCompra" maxWidth="200.0" minWidth="0.0" prefWidth="200.0" text="VALOR COMPRA" />
+                        <TableColumn fx:id="colunmValorVenda" maxWidth="200.0" minWidth="0.0" prefWidth="200.0" text="VALOR VENDA" />
+                        <TableColumn fx:id="colunmDataVencimento" maxWidth="200.0" minWidth="0.0" prefWidth="200.0" text="DATA VENCIMENTO" />
+                        <TableColumn fx:id="colunmOperacao" maxWidth="100.0" prefWidth="100.0" text="OPERACAO" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

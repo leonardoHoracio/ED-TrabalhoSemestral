@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="vendaView" onKeyPressed="#onKeyPresed" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.floricultura.controller.VendaController">
+   <children>
+      <AnchorPane fx:id="anchorPaneView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressedAnchor" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <AnchorPane layoutX="300.0" layoutY="10.0">
+               <children>
+                  <TableView fx:id="tableViewVenda" prefHeight="280.0" prefWidth="548.0">
+                    <columns>
+                      <TableColumn fx:id="colunmNumeroItem" maxWidth="50.0" prefWidth="50.0" style="-fx-alignment: CENTER;" text="N° Item" />
+                      <TableColumn fx:id="colunmCodigoProduto" maxWidth="100.0" minWidth="4.0" prefWidth="100.0" style="-fx-alignment: CENTER_RIGHT;" text="Cód. Produto" />
+                        <TableColumn fx:id="colunmDescricao" maxWidth="200.0" minWidth="4.0" prefWidth="200.0" text="Descrição do Produto" />
+                        <TableColumn fx:id="colunmQuantidade" maxWidth="50.0" minWidth="4.0" prefWidth="50.0" style="-fx-alignment: CENTER_RIGHT;" text="Qtd" />
+                        <TableColumn fx:id="colunmValorUnitario" maxWidth="75.0" minWidth="4.0" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="Valor Unit." />
+                        <TableColumn fx:id="colunmValorTotal" maxWidth="75.0" minWidth="4.0" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="Valor Total" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="585.0" prefWidth="277.0">
+               <children>
+                  <Pane layoutX="35.0" layoutY="175.0" prefHeight="70.0" prefWidth="215.0" styleClass="card-vendas">
+                     <children>
+                        <Label layoutX="20.0" layoutY="10.0" styleClass="card-vendas-label" text="CODIGO DE BARRAS" />
+                        <TextField fx:id="txtCodigoBarras" layoutX="20.0" layoutY="35.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="35.0" layoutY="255.0" prefHeight="70.0" prefWidth="215.0" styleClass="card-vendas">
+                     <children>
+                        <TextField fx:id="txtCodigoProduto" layoutX="20.0" layoutY="35.0" />
+                        <Label layoutX="20.0" layoutY="10.0" styleClass="card-vendas-label" text="CODIGO PRODUTO" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="35.0" layoutY="335.0" prefHeight="70.0" prefWidth="215.0" styleClass="card-vendas">
+                     <children>
+                        <TextField fx:id="txtQuantidadeProduto" layoutX="20.0" layoutY="35.0" />
+                        <Label layoutX="20.0" layoutY="10.0" styleClass="card-vendas-label" text="QUANTIDADE PRODUTO" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="35.0" layoutY="415.0" prefHeight="70.0" prefWidth="215.0" styleClass="card-vendas">
+                     <children>
+                        <Label layoutX="20.0" layoutY="10.0" styleClass="card-vendas-label" text="TOTAL DO ITEM" />
+                        <TextField fx:id="txtValorItem" layoutX="20.0" layoutY="35.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="35.0" layoutY="495.0" prefHeight="70.0" prefWidth="215.0" styleClass="card-vendas">
+                     <children>
+                        <TextField fx:id="txtValorUnitario" layoutX="20.0" layoutY="35.0" />
+                        <Label layoutX="20.0" layoutY="10.0" styleClass="card-vendas-label" text="VALOR UNITÁRIO" />
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="160.0" fitWidth="230.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/beautiful-cherry-blossom.jpg" />
+                     </image>
+                    </ImageView>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="302.0" layoutY="300.0" prefHeight="160.0" prefWidth="185.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="65.0" layoutY="5.0" text="CLIENTE" />
+                  <TextField layoutX="20.0" layoutY="50.0" />
+                  <Label layoutX="20.0" layoutY="85.0" text="NOME" />
+                  <TextField layoutX="20.0" layoutY="110.0" />
+                  <Label layoutX="20.0" layoutY="25.0" text="CÓD. CLIENTE" />
+               </children>
+            </Pane>
+            <Button fx:id="btnPagamento" layoutX="274.0" layoutY="542.0" mnemonicParsing="false" onAction="#onActionBtnPagamento" prefHeight="38.0" prefWidth="112.0" text="PAGAMENTO" />
+            <Button fx:id="btnCancelarVenda" layoutX="394.0" layoutY="542.0" mnemonicParsing="false" onAction="#onActionBtnCancelarVenda" prefHeight="38.0" prefWidth="112.0" text="CANCELAR VENDA" />
+            <Button fx:id="btnRemoverProduto" layoutX="394.0" layoutY="489.0" mnemonicParsing="false" onAction="#onActionBtnRemoverProduto" prefHeight="38.0" prefWidth="112.0" text="REMOVER PRODUTO" />
+            <Button fx:id="btnVoltar" layoutX="274.0" layoutY="489.0" mnemonicParsing="false" onAction="#onActionBtnVoltar" prefHeight="38.0" prefWidth="112.0" text="VOLTAR" />
+            <Button fx:id="btnSimular" layoutX="506.0" layoutY="321.0" mnemonicParsing="false" onAction="#onActionBtnSimular" prefHeight="38.0" prefWidth="112.0" text="SIMULAR" />
+            <Pane layoutX="821.0" layoutY="300.0" prefHeight="286.0" prefWidth="155.0" styleClass="card-vendas">
+               <children>
+                  <TextField fx:id="txtValorTotal" disable="true" editable="false" layoutX="15.0" layoutY="105.0" prefHeight="25.0" prefWidth="130.0" />
+                  <Label layoutX="15.0" layoutY="80.0" text="TOTAL DA VENDA" />
+                  <Label layoutX="15.0" layoutY="14.0" styleClass="card-vendas-label" text="DESCONTO %" />
+                  <Label layoutX="15.0" layoutY="145.0" styleClass="card-vendas-label" text="TROCO" />
+                  <TextField fx:id="txtTroco" disable="true" editable="false" layoutX="15.0" layoutY="170.0" prefHeight="25.0" prefWidth="125.0" />
+                  <Spinner fx:id="spnDesconto" layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="63.0" />
+                  <Button fx:id="btnAplicarDesconto" layoutX="90.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionBtnAplicarDesconto" text="Aplicar" />
+               </children></Pane>
+            <Pane layoutX="638.0" layoutY="300.0" prefHeight="286.0" prefWidth="155.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="15.0" layoutY="80.0" styleClass="card-vendas-label" text="VALOR A RECEBER" />
+                  <TextField fx:id="txtValorReceber" disable="true" editable="false" layoutX="15.0" layoutY="105.0" prefHeight="25.0" prefWidth="125.0" />
+                  <Label layoutX="15.0" layoutY="15.0" styleClass="card-vendas-label" text="VALOR RECEBIDO" />
+                  <TextField fx:id="txtValorRecebido" disable="true" editable="false" layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="125.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="854.0" layoutY="14.0" prefHeight="259.0" prefWidth="141.0" styleClass="card-vendas">
+               <children>
+                  <Label layoutX="16.0" layoutY="14.0" text="Tecla de Operçõess" />
+                  <Label layoutX="5.0" layoutY="65.0" text="F2 - Pagamento" />
+                  <Label layoutX="5.0" layoutY="90.0" text="F3 - Cliente" />
+                  <Label layoutX="5.0" layoutY="115.0" text="F5 - Remover Produto" />
+                  <Label layoutX="5.0" layoutY="140.0" text="F6 - Cons. Valor Produto" />
+                  <Label layoutX="5.0" layoutY="230.0" text="ESC - Voltar" />
+                  <Label layoutX="5.0" layoutY="190.0" text="F9 - Cancelar Venda" />
+                  <Label layoutX="5.0" layoutY="165.0" text="F7 - Inserir Qtd Produto" />
+                  <Label layoutX="5.0" layoutY="40.0" text="F1 - Nova Venda" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
